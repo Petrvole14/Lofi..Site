@@ -1,0 +1,551 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+        <style>
+            html {
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                
+            }
+            body {
+                background-color: #000000;
+            }
+            .kofi1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .kofi1 h1 {
+                position: relative;
+                top: 75px;
+                font-size: 75px;
+                left:100px;
+                font-family: Cursive, sans-serif;
+                z-index: 0;
+                color: rgb(0, 0, 0);
+            }
+            .kofi1 video {
+                position: relative;
+                top: -225px;
+                left: 20px;
+                height: 900px;
+                width: 100%;
+                z-index: -5;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                scale: 1.1;
+                
+                
+            }
+            .kofi2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                top: -200px;
+            }
+            .kofi2 nav.nav1 {
+                display: flex;
+                gap: 20px;
+                position: relative;
+                top: -100px;
+                scale: 0.3;
+                right: 300px;
+                
+            }
+            .kofi2 nav.nav1 video {
+                position: relative;
+                top: -100px;
+                left: 300px;
+                scale: 0.3;
+                
+                
+                
+            }
+            .kofi2 nav.nav1 video.show {
+                animation: slidein 1s ease forwards;
+            }
+            .kofi2 h1 {
+                font-size: 50px;
+                font-family: Cursive, sans-serif;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                white-space: nowrap;   
+                margin: 0;
+                justify-content: center;
+                justify-items: center;
+                margin-top: 200px;
+                
+                          
+           }
+            @keyframes slidein {
+                from {
+                    transform: translateY(200px);
+                    opacity: 0;
+                    scroll-behavior: smooth;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                    scroll-behavior: smooth;
+                }
+            }
+            .nav2 {
+                position:fixed;
+                background-color: #2150d1;
+                padding: 40px 100%;
+                top: 0;
+                left: 0;
+                
+                z-index: 1000;
+            }
+            .nav2 .ikona {
+                position: fixed;
+                top: 30px;
+                left: 50px;
+                scale: 2.0;
+            }
+            .nav2 .nav3 {
+                position: fixed;
+                color: #020000;
+                left: 10px;
+                padding: 20px;
+                background-color: #f09217;
+                border-radius: 25px;
+                scale: 0.8;
+                font-family: Cursive, sans-serif;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                
+                
+            }
+            .nav2 .ikona:hover + .nav3,
+            .nav2 .nav3:hover {
+                opacity: 1;
+                pointer-events: auto;
+            }   .kofi2 {
+                position: relative;
+                top: -300px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding: 40px 5%;
+            }
+                
+            
+
+            .video-row {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                width: 100%;
+                
+            }
+
+            .video-row video {
+                flex: 1 1 0;          
+                
+                min-width: 0;
+                max-width: 400px;     
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 20px;
+                transition: scale 0.3s ease;
+                cursor: pointer;
+                margin-top: 100px;
+                
+            }
+            .video-row2 {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                margin-left: 100px;
+                width: 100%;
+            }
+            .video-row2 video {
+                flex: 1 1 0;          
+                min-width: 0;
+                max-width: 400px;     
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 20px;
+                transition: scale 0.3s ease;
+                cursor: pointer;
+                animation: slidein 1s ease forwards;
+                
+            }
+
+            .video-row video:hover {
+                scale: 1.1;
+            }
+            .video-row video.show {
+                animation: slidein 1s ease forwards;
+            }
+            .ikona2 {
+                position: fixed;
+                top: 30px;
+                right: 150px;
+                scale: 2.0;
+                opacity: 1.0;
+                display: flex;
+                gap: 30px;
+
+
+            }
+            .ikona2 .i1:hover,
+            .ikona2 .i2:hover,
+            .ikona2 .i3:hover,
+            .ikona2 .i4:hover,
+            .ikona2 .i5:hover {
+                
+                transition: scale 0.3s ease;
+                cursor: pointer;
+                scroll-behavior: smooth;
+            }
+            .ikona2 .i1:hover,
+            .ikona2 .i2:hover,
+            .ikona2 .i3:hover,
+            .ikona2 .i4:hover,
+            .ikona2 .i5:hover {
+                scale: 1.1;
+            }
+            .kofi3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                top: 0px;
+            }
+            .kofi3.show {
+                animation: slidein 1s ease forwards;
+            }
+            .kofi3 h1 {
+                position: relative;
+                top: -1000px;
+                left: 0px;
+                font-size: 75px;
+                font-family: Cursive, sans-serif;
+                z-index: 0;
+                color: rgb(255, 255, 255);
+                scale: 0.5;
+                scroll-behavior: smooth;
+                text-align: center;
+            }
+            .kofi3 video {
+                flex: 1 1 0;          
+                min-width: 0;
+                max-width: 100%;     
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 20px;
+                transition: scale 0.3s ease;
+                
+            }
+            .kofi2 .nav1k video.show {
+            animation: slidein 1s ease forwards;
+            }
+            .kofi2 .nav1 .vid1,
+            .kofi2 .nav1 .vid2,
+            .kofi2 .nav1 .vid3,
+            .kofi2 .nav1 .vid4 {
+            transition: scale 0.3s ease;
+            cursor: pointer;
+            scroll-behavior: smooth;
+            }
+
+            .kofi2 .nav1 .vid1:hover,
+            .kofi2 .nav1 .vid2:hover,
+            .kofi2 .nav1 .vid3:hover,
+            .kofi2 .nav1 .vid4:hover {
+                scale: 1.1;
+            }
+            .kofi4 {
+                display: flex;
+                
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                justify-items: center;
+                
+                
+                
+                max-width: 100%;
+            }
+            .kofi4 .textdole1 {
+                
+                font-size: 60px;
+                font-family: Cursive, sans-serif;
+                z-index: 0;
+                color: rgb(255, 255, 255);
+                scale: 1.0;
+                scroll-behavior: smooth;
+                text-align: center;
+                margin-left: 100px;
+                
+
+            }
+            .kofi4 .textdole1 h1 {
+                font-size: 50px;
+                margin: 10px;
+                margin-top: -300px;
+                
+                
+                
+            }
+            .kofi4 .textdole2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 325px;
+                flex-wrap: wrap;
+                color: rgb(255, 255, 255);
+                margin-left: 175px;
+                margin-top: -100px;
+                
+                font-family: Cursive, sans-serif;
+                
+                
+            }
+            .kofi4 .textdole2 h1 {
+                
+                
+                font-size: 50px;
+            }
+            .dole1 {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                padding: 40px 5%;
+
+            }
+            .dole1 main {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 40px 5%;
+                gap: 20px;
+                margin-left: 230px;
+                margin-top: -100px;
+
+            }
+            .dole1 main video {
+                        
+                flex:none;
+                width: 300px;
+                max-width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 20px;
+                margin:0;
+                
+                
+                
+            }
+            .dole1 main video:hover {
+                scale: 1.1;
+                scroll-behavior: smooth;
+                
+            }
+            .dole2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+            }
+            .dole2 main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 5%;
+                gap: 20px;
+                
+                margin-top: -855px;
+                margin-left: 150px;
+
+            }
+            .dole2 main video {
+                        
+                flex:none;
+                width: 300px;
+                max-width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 20px;
+                margin:0;
+                
+                
+                
+            }
+            .dole2 main video:hover {
+                scale: 1.1;
+                scroll-behavior: smooth;
+                
+            }
+            .dole3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+            }
+            .dole3 main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 5%;
+                gap: 20px;
+                margin-top: -855px;
+                margin-left: 1070px;
+            }
+            .dole3 main video {
+                        
+                flex:none;
+                width: 300px;
+                max-width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 20px;
+                margin:0;
+                
+                
+                
+            }
+            #footer {
+                background-color: #2150d1;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                margin-left: 100px;
+                margin-top: 10px;
+            }
+            
+            
+            
+            
+                   
+            
+            
+            
+            
+            
+                
+            
+            
+        </style>
+    </head>
+    <body>
+        <nav class="nav2">
+            <div class="ikona">
+                <a href="#"><i class="fa-solid fa-bars" style="color: rgb(0, 0, 0);"></i></a>
+            </div>
+            <div class="nav3">
+                <h1>Lofi youtube</h1>
+                <h1>My steam</h1>
+                <h1>My discord</h1>
+            </div>
+            <div class="ikona2">
+                <a class="i1" href="https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow"><i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i></a>
+                <a class="i2" href="https://discord.com/invite/hUKvJnw"><i class="fa-brands fa-discord" style="color: rgb(0, 0, 0);"></i></a>
+                <a class="i3" href="https://www.instagram.com/lofigirl/"><i class="fa-brands fa-instagram" style="color: rgb(0, 0, 0);"></i></a>
+                <a class="i4" href="https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM"><i class="fa-brands fa-spotify" style="color: rgb(0, 0, 0);"></i></a>
+                <a class="i5" href="https://lofigirlshop.com/"><i class="fa-solid fa-bag-shopping" style="color: rgb(0, 0, 0);"></i></a>
+            </div>
+        </nav>
+        <section class ="kofi1">
+            <h1>Chill Place</h1>
+            <video src="videa/lofi2.mp4" autoplay muted loop></video>
+        </section>
+        <section class="kofi2">
+            <h1 class="kofi2-title">What are our ways to relax today ?</h1>
+            <div class="video-row">
+                <video class="vid1" src="videa/lofi.mp4" autoplay muted loop></video>
+                <video class="vid2" src="videa/lofi2.mp4" autoplay muted loop></video>
+                <video class="vid3" src="videa/lofi3.mp4" autoplay muted loop></video>
+                
+            </div>
+            
+        </section>
+        <section class="kofi3">
+            <video class="vid4" src="videa/lofi5.mp4" autoplay muted loop></video>
+            <h1> Maybe, today wasn't your best. But it's alright. You can do it next time. Get out of fear and anxiety and relax. You are doing great!</h1>
+        </section>
+        <section class="kofi4">
+            <div class="textdole1">
+                <h1>Categories</h1>
+            </div>
+            <div class="textdole2">
+                <h1>Chill</h1>
+                <h1>Study</h1>
+                <h1>Sleep</h1>
+                
+            </div>
+        </section>
+        <section class="dole1">
+            <main>
+                <video id="vid6" src="videa/lofi6.mp4" autoplay muted loop></video>
+                <video id="vid7" src="videa/lofi7.mp4" autoplay muted loop></video>
+                <video id="vid8" src="videa/lofi8.mp4" autoplay muted loop></video>
+                <video id="vid9" src="videa/lofi9.mp4" autoplay muted loop></video>
+                
+            </main>
+        </section>
+        <section class="dole2">
+            <main>
+                <video id="vid12" src="videa/lofi12.mp4" autoplay muted loop></video>
+                <video id="vid13" src="videa/lofi13.mp4" autoplay muted loop></video>
+                <video id="vid14" src="videa/lofi14.mp4" autoplay muted loop></video>
+                <video id="vid15" src="videa/lofi15.mp4" autoplay muted loop></video>
+                
+            </main>
+        </section>
+        <section class="dole3">
+            <main>
+                <video id="vid16" src="videa/lofi16.mp4" autoplay muted loop></video>
+                <video id="vid17" src="videa/lofi17.mp4" autoplay muted loop></video>
+                <video id="vid18" src="videa/lofi18.mp4" autoplay muted loop></video>
+                <video id="vid19" src="videa/lofi19.mp4" autoplay muted loop></video>
+                
+            </main>
+        </section>
+        <footer id="footer">
+            <h1>Petr Ševčík</h1>
+            <h1>All videos is from lofi</h1>
+            <h1> This is just a fun project</h1>
+        </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.video-row video').forEach((video) => {
+            observer.observe(video);
+        });
+        document.querySelectorAll(".kofi2 .nav1k video").forEach((video) => {
+            observer.observe(video);
+        });
+        document.querySelectorAll('.kofi3').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>    
+    </body>
+    </html>
